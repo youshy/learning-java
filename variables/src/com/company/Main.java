@@ -71,7 +71,7 @@ public class Main {
         // You have to think about it
     }
 
-    public static void main(String[] strings) {
+    public static void checkOperators() {
         int valA = 21;
         int valB = 6;
         int valC = 13;
@@ -83,5 +83,49 @@ public class Main {
 
         System.out.println(result1);
         System.out.println(result2);
+    }
+
+    public static void arrays() {
+        // initializing array
+        float[] theVals = new float[3];
+
+        // Populating array
+        float sum = 0.0f;
+        for(int i = 0; i < theVals.length; i++) {
+            sum += theVals[i];
+        }
+
+        // What if I want to initialize the array already?
+        float[] alreadyInitializedVals = { 10.0f, 11.3f, 31.3f };
+
+        // How to loop through?
+        float anotherSum = 0.0f;
+
+        for(float currentValue : alreadyInitializedVals) {
+            System.out.println("Current value from the array: " + currentValue);
+            sum += currentValue;
+            System.out.println(sum);
+        }
+    }
+
+    public static void fizzBuzz(int iterations) {
+        int start = 1;
+
+        while (start != iterations + 1) {
+            if (start % 15 == 0) {
+                System.out.println("FizzBuzz");
+            } else if (start % 5 == 0) {
+                System.out.println("Buzz");
+            } else if (start % 3 == 0) {
+                System.out.println("Fizz");
+            } else {
+                System.out.println(start);
+            }
+            start++;
+        }
+    }
+
+    public static void main(String[] strings) {
+        fizzBuzz(30);
     }
 }

@@ -61,6 +61,23 @@ class Flight {
         newFlight.passengers = this.passengers + secondFlight.passengers;
         return newFlight;
     }
+
+    // this will get an array with any number of parameters
+    // haven't implemented the functions as there are mostly placeholders.
+    public void addPassengers(Passenger... list) {
+        if(hasRoom(list.length)) {
+            passengers += list.length;
+            for (Passenger passenger : list) {
+                totalCheckedBags += passenger.getCheckedBags();
+            }
+        } else {
+            tooManyBags();
+        }
+    }
+}
+
+class Passenger {
+    // Placeholder
 }
 
 public class Main {
